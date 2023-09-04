@@ -7,3 +7,9 @@ SETUP:
 
 2. Navigate to a folder with the project and type CMD in search bar
 ![cmd](https://raw.githubusercontent.com/mostdev-eth/Portfolio-Tracker/main/CMD.jpg)
+
+This opens command prompt in project location.
+
+3. Install all the dependancies for the project (body-parser, express, node-fetch) using "npm install" in command propmpt.
+
+4. 
