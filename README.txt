@@ -5,4 +5,5 @@ SETUP:
   This command shows version of Node. If it throws a result like "v14.17.6" it means Node.js is installed.
   If not visit https://nodejs.org/en to download.
 
-2. 
+2. Navigate to a folder with the project and type CMD in search bar
+![cmd](https://raw.githubusercontent.com/mostdev-eth/Portfolio-Tracker/main/CMD.jpg)
