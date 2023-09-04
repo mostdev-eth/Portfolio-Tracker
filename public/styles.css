@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.input-div {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.input-div input {
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.input-div label {
+    display: block;
+}
+
+.middle-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 2%;  /* Gap between left and right columns */
+}
+
+.left-column, .right-column {
+    width: 49%; /* Adjusted width to account for the gap */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolios {
+    margin: 20px;
+}
+
+#portfolios h3 {
+    margin: 20px 2%; /* Top and bottom margin for spacing, and left-right margin to align with the table */
+    padding: 0;
+    font-size: 1.5em; /* Adjust the font size as needed */
+    border-bottom: 2px solid #333; /* Optional: Add a bottom border to separate the title from the table */
+}
+
+#portfolios table {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 96%; /* Reduced width to allow for margins */
+    margin-left: 2%; /* Left margin */
+    margin-right: 2%; /* Right margin */
+    border-collapse: collapse;
+    table-layout: fixed; /* Makes sure table doesn't expand beyond its container */
+    word-wrap: break-word; /* Breaks long words so they don't overflow */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:last-child {
+    border-bottom: 2px solid black;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 30px; /* Added spacing above the submit button */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.summary-row, .summary-values {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.summary-row {
+    font-weight: bold;
+}
+
+table {
+    width: 96%; /* Reduced width to allow for margins */
+    margin-left: 2%; /* Left margin */
+    margin-right: 2%; /* Right margin */
+    border-collapse: collapse;
+    table-layout: fixed; /* Makes sure table doesn't expand beyond its container */
+    word-wrap: break-word; /* Breaks long words so they don't overflow */
+    margin-bottom: 20px; /* Added spacing between tables */
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+}
+
+/* This will ensure the summary section has a continuous border */
+
+table .summary-values td {
+    border-bottom: 1px solid black;
+}

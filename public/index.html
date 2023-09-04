@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Portfolio Tracker</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <div class="input-div">
+            <input type="text" id="ticker" placeholder="Ticker">
+            <label for="ticker">Ticker</label>
+        </div>
+        <div class="input-div">
+            <input type="text" id="price" placeholder="Price">
+            <label for="price">Price ATB</label>
+        </div>
+        <div class="input-div">
+            <input type="text" id="value" placeholder="Cost">
+            <label for="value">Value ATB</label>
+        </div>
+        <!-- <div class="input-div">
+            <input type="text" id="currency" placeholder="Currency">
+            <label for="currency">Currency</label>
+        </div> -->
+        <div class="input-div">
+            <input type="number" id="amount" placeholder="Amount">
+            <label for="amount">Amount</label>
+        </div>
+        <div class="input-div">
+            <input type="date" id="date">
+            <label for="date">Date</label>
+        </div>
+        <button onclick="saveData()">Submit</button>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="middle-section">
+
+        <!-- Left Column - Price Dashboard -->
+        <div class="left-column">
+            <h2>Price Dashboard</h2>
+            <table id="dashboardTable">
+                <!-- This table will be populated dynamically using JavaScript -->
+            </table>
+            <button onclick="refreshPrices()">Refresh</button>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <button onclick="populateTables()">Populate Tables</button>
+        </div>
+
+    </div>
+
+    <!-- Portfolios Section -->
+    <div id="portfolios">
+        <!-- This section will be populated dynamically using JavaScript -->
+    </div>
+
+    <script src="/scripts.js"></script>
+</body>
+
+</html>
