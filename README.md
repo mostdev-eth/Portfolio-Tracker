@@ -2,7 +2,7 @@ SETUP:
 
 1. Download project files (click green code button and download .zip)
 
-2. Navigate to a folder with the project and type CMD in search bar (opens command prompt in project location).
+2. Navigate to a folder with the project and type CMD in folder selection bar (opens command prompt in project location).
 ![cmd](https://raw.githubusercontent.com/mostdev-eth/Portfolio-Tracker/main/CMD.jpg)
 
 3. Make sure You have node.js installed on your machine.
