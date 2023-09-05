@@ -3,7 +3,7 @@ SETUP:
 1. Download project files (click green code button and download .zip)
 
 2. Navigate to a folder with the project and type CMD in folder selection bar (opens command prompt in project location).
-![cmd](https://raw.githubusercontent.com/mostdev-eth/Portfolio-Tracker/main/CMD.jpg)
+![cmd](https://raw.githubusercontent.com/mostdev-eth/Portfolio-Tracker/main/images/CMD.jpg)
 
 3. Make sure You have node.js installed on your machine.
   In the open command prompt type "node -v" and hit ENTER
