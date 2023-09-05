@@ -10,10 +10,10 @@ SETUP:
   This command shows version of Node. If it throws a result like "v14.17.6" it means Node.js is installed.
   If not visit https://nodejs.org/en to download.
 
-4. Install all the dependancies for the project (body-parser, express, node-fetch) using "npm install" in command propmpt.
+4. Now again in command prompt type "npm install" and hit ENTER to install all the dependancies for the project (body-parser, express, node-fetch).
 
-5. Launch portfolio website with "npm start"
+5. Launch portfolio website with "npm start" and ENTER in command prompt
 
 6. Visit http://localhost:3000
 
-7. To shut down the server use "CTRL + C" followed by "y" in commannd prompt
+7. To shut down the server use "CTRL + C" followed by "y" and ENTER in commannd prompt
