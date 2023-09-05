@@ -16,4 +16,4 @@ SETUP:
 
 6. Visit http://localhost:3000
 
-7. To shut down the server use "CTRL + C" in commannd prompt
+7. To shut down the server use "CTRL + C" followed by "y" in commannd prompt
