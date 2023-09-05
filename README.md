@@ -6,7 +6,7 @@ SETUP:
 ![cmd](https://raw.githubusercontent.com/mostdev-eth/Portfolio-Tracker/main/CMD.jpg)
 
 3. Make sure You have node.js installed on your machine.
-  Open command prompt from start and type "node -v"
+  In the open command prompt type "node -v" and hit ENTER
   This command shows version of Node. If it throws a result like "v14.17.6" it means Node.js is installed.
   If not visit https://nodejs.org/en to download.
 
