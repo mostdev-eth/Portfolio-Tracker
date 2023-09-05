@@ -1,6 +1,6 @@
 SETUP:
 
-1. Download project files
+1. Download project files (click green code button and download .zip)
 
 2. Navigate to a folder with the project and type CMD in search bar (opens command prompt in project location).
 ![cmd](https://raw.githubusercontent.com/mostdev-eth/Portfolio-Tracker/main/CMD.jpg)
