@@ -5,10 +5,19 @@ body {
     background-color: #f4f4f4;
 }
 
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 10%;
+}
+
 .header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
 }
 
@@ -41,6 +50,36 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.performance-bar {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 20px 0px 20px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.performance-bar:hover {
+    transform: scale(0.95);
+}
+
+.arrow-icon {
+    margin-left: 5px;
+    font-size: 1em;
+}
+
+.chart-section {
+    display: none;
+    background-color: white;
+    margin: 0px 20px 40px 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .portfolios {
     margin: 20px;
 }
@@ -56,6 +95,8 @@ body {
     margin-bottom: 20px;
 }
 
+
+
 table {
     width: 96%; /* Reduced width to allow for margins */
     margin-left: 2%; /* Left margin */
@@ -64,6 +105,8 @@ table {
     table-layout: fixed; /* Makes sure table doesn't expand beyond its container */
     word-wrap: break-word; /* Breaks long words so they don't overflow */
 }
+
+
 
 table, th, td {
     border: 1px solid #ddd;
@@ -78,9 +121,25 @@ th {
     background-color: #f2f2f2;
 }
 
+#statsSection #statsTable {
+    margin: 0 auto; /* Center the table horizontally */
+    text-align: center;
+    font-weight: bold;
+    width: 70%; /* Set a fixed width to center the table */
+}
+
+#statsSection #statsTable th,
+#statsSection #statsTable td {
+    text-align: center; /* Center text within th and td elements */
+}
+
+
 tr:last-child {
     border-bottom: 2px solid black;
 }
+
+
+
 
 button {
     padding: 10px 15px;
@@ -90,15 +149,13 @@ button {
     border: 2px solid white;
     border-radius: 5px;
     transition: background-color 0.3s;
-    margin-top: 30px; /* Added spacing above the submit button */
+    margin-top: 30px; 
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-button:hover {
-    background-color: #555;
-}
+
 
 .summary-row, .summary-values {
     background-color: white;
@@ -128,3 +185,101 @@ table td, table th {
 table .summary-values td {
     border-bottom: 1px solid black;
 }
+.red-text {
+    color: red;
+}
+
+.green-text {
+    color: green;
+
+}
+
+.footer {
+    height: 10vh;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 35px; /* Adjust the width of the image as needed */
+    height: 35px; /* Adjust the height of the image as needed */
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+
+.button-common {
+    --b: 3px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #373B44; /* default color */
+    
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+  
+    border: 0;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-common:hover,
+.button-common:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+.button-common:active {
+    background: var(--color);
+    color: #fff;
+}
+
+/* Button for dark backgrounds */
+.button-inverted {
+    --color: #fff; /* Inverted color for dark backgrounds */
+    --outline-color: #fff; /* Set outline color to match the inverted button color */
+    --background-color: #333; /* Set background color for inverted button */
+}
+
+/* Apply the button styles for .button-inverted */
+.button-inverted {
+ 
+    /* Additional styles specific to inverted button */
+    background-color: var(--background-color);
+    color: var(--color);
+}
+
+/* Hover and Focus styles for inverted button */
+.button-inverted:hover,
+.button-inverted:focus-visible {
+    outline-color: var(--outline-color);
+    background-color: var(--color);
+    color: var(--background-color);
+}
+
+
+
+

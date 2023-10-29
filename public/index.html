@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Portfolio Tracker</title>
     <link rel="stylesheet" href="/styles.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
@@ -36,7 +39,7 @@
             <input type="date" id="date">
             <label for="date">Date</label>
         </div>
-        <button onclick="saveData()">Submit</button>
+        <button class="button-common button-inverted" onclick="saveData()">Submit</button>
     </div>
 
     <!-- Middle Section -->
@@ -48,20 +51,60 @@
             <table id="dashboardTable">
                 <!-- This table will be populated dynamically using JavaScript -->
             </table>
-            <button onclick="refreshPrices()">Refresh</button>
+            <!-- <button onclick="refreshPrices()">Refresh Dashboard</button> -->
         </div>
 
         <!-- Right Column -->
         <div class="right-column">
-            <button onclick="populateTables()">Populate Tables</button>
-        </div>
+            <button class="button-common" onclick="refreshPrices()">Refresh Dashboard</button>
+            <button class="button-common" id="populateTablesBtn" onclick="populateTables()">Populate Tables</button>
+            <div id="statsSection">
+                <h3>Current Stats:</h3>
+                <table id="statsTable">
+                    <tr>
+                        <td>Total Invested:</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Present Value:</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>P / L:</td>
+                        <td>0.00</td>
+                    </tr>
+                </table>
+            </div>
+            
 
+        </div>
     </div>
+
+
+    <!-- Performance Bar Section -->
+    <div class="performance-bar">
+    <div class="performance-bar-text button-common" onclick="toggleChartVisibility()">Performance<span class="arrow-icon" id="arrowIcon">►</span></div>
+    
+    </div>
+
+<!-- Chart Section -->
+<div id="chartSection" class="chart-section">
+    <div id="portfolio-graph"></div>
+    <canvas id="portfolioValueChart" width="400" height="200"></canvas>
+</div>
+
 
     <!-- Portfolios Section -->
     <div id="portfolios">
         <!-- This section will be populated dynamically using JavaScript -->
     </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">With love, by 5hady.eth</p>
+            <img src="../images/shady.png" alt="Logo" class="footer-logo">
+  
+        </div>
+    </footer>
 
     <script src="/scripts.js"></script>
 </body>

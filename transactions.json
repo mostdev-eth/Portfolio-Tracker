@@ -1,1 +1,184 @@
-
+[
+  {
+    "ticker": "BTC",
+    "price": "29226",
+    "value": "64.16",
+    "amount": "0.00218212",
+    "date": "2023-07-24"
+  },
+  {
+    "ticker": "BTC",
+    "price": "29034",
+    "value": "63.74",
+    "amount": "0.00218217",
+    "date": "2023-08-04"
+  },
+  {
+    "ticker": "LINK",
+    "price": "7.38",
+    "value": "31.66",
+    "amount": "4.29032",
+    "date": "2023-08-08"
+  },
+  {
+    "ticker": "LINK",
+    "price": "7.38",
+    "value": "31.66",
+    "amount": "4.29203",
+    "date": "2023-08-08"
+  },
+  {
+    "ticker": "HBAR",
+    "price": "0.06069",
+    "value": "31.698",
+    "amount": "522.31317",
+    "date": "2023-08-08"
+  },
+  {
+    "ticker": "FET",
+    "price": "0.2002",
+    "value": "31.70",
+    "amount": "158.3337",
+    "date": "2023-08-08"
+  },
+  {
+    "ticker": "SOL",
+    "price": "24.47",
+    "value": "42.49",
+    "amount": "1.7362",
+    "date": "2023-08-14"
+  },
+  {
+    "ticker": "BTC",
+    "price": "29559.51",
+    "value": "63.4",
+    "amount": "0.00213246",
+    "date": "2023-08-14"
+  },
+  {
+    "ticker": "BTC",
+    "price": "26209.95",
+    "value": "63.65",
+    "amount": "0.00241398",
+    "date": "2023-08-20"
+  },
+  {
+    "ticker": "UNI",
+    "price": "4.926",
+    "value": "63.65",
+    "amount": "12.84284",
+    "date": "2023-08-20"
+  },
+  {
+    "ticker": "BTC",
+    "price": "27699.97",
+    "value": "63.19",
+    "amount": "0.00226732",
+    "date": "2023-08-29"
+  },
+  {
+    "ticker": "SOL",
+    "price": "28.76",
+    "value": "50.61",
+    "amount": "1.7596",
+    "date": "2023-07-16"
+  },
+  {
+    "ticker": "BTC",
+    "price": "25887.60",
+    "value": "62.49",
+    "amount": "0.00241400",
+    "date": "2023-09-07"
+  },
+  {
+    "ticker": "BTC",
+    "price": "25115.79",
+    "value": "62.34",
+    "amount": "0.00248211",
+    "date": "2023-09-11"
+  },
+  {
+    "ticker": "HBAR",
+    "price": "0.04585",
+    "value": "10",
+    "amount": "218.1",
+    "date": "2023-09-11"
+  },
+  {
+    "ticker": "DOT",
+    "price": "3.96",
+    "value": "20",
+    "amount": "5.05",
+    "date": "2023-09-11"
+  },
+  {
+    "ticker": "FET",
+    "price": "0.2232",
+    "value": "12",
+    "amount": "53.76",
+    "date": "2023-09-11"
+  },
+  {
+    "ticker": "LINK",
+    "price": "5.79",
+    "value": "10",
+    "amount": "1.727",
+    "date": "2023-09-11"
+  },
+  {
+    "ticker": "BTC",
+    "price": "27714.99",
+    "value": "97.68",
+    "amount": "0.00352441",
+    "date": "2023-10-04"
+  },
+  {
+    "ticker": "FET",
+    "price": "0.2207",
+    "value": "14.98553",
+    "amount": "67.9",
+    "date": "2023-10-04"
+  },
+  {
+    "ticker": "HBAR",
+    "price": "0.04857",
+    "value": "14.998416",
+    "amount": "308.8",
+    "date": "2023-10-04"
+  },
+  {
+    "ticker": "ENJ",
+    "price": "0.228",
+    "value": "19.99788",
+    "amount": "87.71",
+    "date": "2023-10-04"
+  },
+  {
+    "ticker": "MATIC",
+    "price": "0.562",
+    "value": "19.99596",
+    "amount": "35.58",
+    "date": "2023-10-04"
+  },
+  {
+    "ticker": "AVAX",
+    "price": "10.09",
+    "value": "27.69705",
+    "amount": "2.745",
+    "date": "2023-10-04"
+  },
+  {
+    "ticker": "DOT",
+    "price": "4.18",
+    "value": "30",
+    "amount": "7.19",
+    "date": "2023-10-28"
+  },
+  {
+    "ticker": "PYR",
+    "price": "4.076",
+    "value": "50",
+    "amount": "12.1938",
+    "date": "2023-10-28"
+  }
+]
