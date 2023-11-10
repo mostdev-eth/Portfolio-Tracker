@@ -1,11 +1,24 @@
 // Function to save user input to the server
 function saveData() {
+    // Get input values
     const ticker = document.getElementById('ticker').value;
     const price = document.getElementById('price').value;
     const value = document.getElementById('value').value;
     const amount = document.getElementById('amount').value;
     const date = document.getElementById('date').value;
 
+    // Check if any input is empty
+    if (!ticker || !price || !value || !amount || !date) {
+        const errorMessage = document.getElementById('error-message');
+        errorMessage.textContent = "Please fill out all the fields!";
+        errorMessage.style.display = 'block';
+        setTimeout(() => {
+            errorMessage.style.display = 'none';
+        }, 4000); // Hide error message after 4 seconds
+        return; // Exit function if any input is empty
+    }
+
+    // Prepare data object
     const data = {
         ticker: ticker,
         price: price,
@@ -14,6 +27,7 @@ function saveData() {
         date: date
     };
 
+    // Send data to server using fetch
     fetch('/saveData', {
         method: 'POST',
         headers: {
@@ -24,7 +38,14 @@ function saveData() {
         .then(response => response.json())
         .then(data => {
             if (data.status === 'success') {
-                console.log("Data saved successfully.");
+                // Show success message
+                const successMessage = document.getElementById('success-message');
+                successMessage.textContent = "Data saved successfully!";
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 4000); // Hide success message after 4 seconds
+
                 // Clear input fields
                 document.getElementById('ticker').value = '';
                 document.getElementById('price').value = '';
@@ -32,13 +53,26 @@ function saveData() {
                 document.getElementById('amount').value = '';
                 document.getElementById('date').value = '';
             } else {
-                console.error("Error saving data:", data.message);
+                // Show error message from server
+                const errorMessage = document.getElementById('error-message');
+                errorMessage.textContent = "Error saving data: " + data.message;
+                errorMessage.style.display = 'block';
+                setTimeout(() => {
+                    errorMessage.style.display = 'none';
+                }, 4000); // Hide error message after 4 seconds
             }
         })
         .catch(error => {
-            console.error("Error:", error);
+            // Show error message if fetch fails
+            const errorMessage = document.getElementById('error-message');
+            errorMessage.textContent = "Error: " + error;
+            errorMessage.style.display = 'block';
+            setTimeout(() => {
+                errorMessage.style.display = 'none';
+            }, 4000); // Hide error message after 4 seconds
         });
 }
+
 
 // Function to refresh prices from the CoinMarketCap API
 function refreshPrices() {
@@ -147,7 +181,8 @@ function populateTables() {
 
                                 // Calculate P/L and set cell content
                                 const pl = ((pricesData.data[transaction.ticker].quote.USD.price * transaction.amount) - (transaction.price * transaction.amount)).toFixed(2);
-                                cell6.innerHTML = pl;
+                                const plPercentage = ((pl * 100) / transaction.value).toFixed(2); // Calculate P/L percentage
+                                cell6.innerHTML = `${pl} (${plPercentage}%)`;
 
                                 // Set color based on P/L
                                 if (pl < 0) {
@@ -175,7 +210,8 @@ function populateTables() {
                             summaryValuesRow.insertCell(2).innerHTML = totalValue.toFixed(2);
                             summaryValuesRow.insertCell(3).innerHTML = totalAmount;
                             summaryValuesRow.insertCell(4).innerHTML = (totalAmount * pricesData.data[ticker].quote.USD.price).toFixed(2);
-                            summaryValuesRow.insertCell(5).innerHTML = totalPL.toFixed(2);
+                            const totalPLPercentage = ((totalPL * 100) / totalValue).toFixed(2); // Calculate total P/L percentage
+                            summaryValuesRow.insertCell(5).innerHTML = `${totalPL.toFixed(2)} (${totalPLPercentage}%)`;
 
                             // Set color based on total P/L
                             if (totalPL < 0) {
@@ -194,12 +230,15 @@ function populateTables() {
 
                         // Update total summary section with current values
                         const statsTable = document.getElementById('statsTable');
-                        statsTable.rows[0].cells[1].textContent = Invested.toFixed(2);
-                        statsTable.rows[1].cells[1].textContent = PresentValue.toFixed(2);
-                        statsTable.rows[2].cells[1].textContent = Profit.toFixed(2);
+                        const investedCell = statsTable.rows[0].cells[1];
+                        const presentValueCell = statsTable.rows[1].cells[1];
+                        const profitCell = statsTable.rows[2].cells[1];
+
+                        investedCell.textContent = `${Invested.toFixed(2)}`;
+                        presentValueCell.textContent = PresentValue.toFixed(2);
+                        profitCell.textContent = `${Profit.toFixed(2)} (${((Profit * 100) / Invested).toFixed(2)}%)`;
 
                         // Color coding for Profit in total summary section
-                        const profitCell = statsTable.rows[2].cells[1];
                         profitCell.style.color = Profit < 0 ? 'red' : 'green'; // Set text color based on Profit value
 
                         // Display summary section
@@ -217,6 +256,8 @@ function populateTables() {
             console.error("Error fetching transactions data:", error);
         });
 }
+
+
 
 
 
@@ -343,6 +384,7 @@ function toggleChartVisibility() {
         arrowIcon.textContent = '►'; // Right arrow indicating collapsed state
     }
 }
+
 
 // function toggleChartVisibility() {
 //     const chartSection = document.getElementById('chartSection');

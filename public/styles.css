@@ -10,7 +10,7 @@ h2 {
 }
 
 h3 {
-    text-align: center;
+    text-align: left;
     margin-top: 10%;
 }
 
@@ -30,11 +30,13 @@ h3 {
     padding: 10px;
     margin-bottom: 5px;
     text-align: center;
+    
 }
 
 .input-div label {
     display: block;
 }
+
 
 .middle-section {
     display: flex;
@@ -87,6 +89,7 @@ h3 {
 #portfolios h3 {
     margin: 20px 2%; /* Top and bottom margin for spacing, and left-right margin to align with the table */
     padding: 0;
+    text-align: left;
     font-size: 1.5em; /* Adjust the font size as needed */
     border-bottom: 2px solid #333; /* Optional: Add a bottom border to separate the title from the table */
 }
@@ -121,6 +124,9 @@ th {
     background-color: #f2f2f2;
 }
 
+#statsSection h3 {
+    text-align: center;
+}
 #statsSection #statsTable {
     margin: 0 auto; /* Center the table horizontally */
     text-align: center;
@@ -148,6 +154,7 @@ button {
     color: #fff;
     border: 2px solid white;
     border-radius: 5px;
+    font-weight: bold;
     transition: background-color 0.3s;
     margin-top: 30px; 
     display: block;
@@ -206,6 +213,7 @@ table .summary-values td {
 
 .footer-content {
     display: flex;
+  
     align-items: center;
 }
 
@@ -218,6 +226,7 @@ table .summary-values td {
 
 .footer-text {
     margin: 0;
+    letter-spacing: 2px;
     font-size: 1.2rem;
 }
 
@@ -280,6 +289,41 @@ table .summary-values td {
     color: var(--background-color);
 }
 
+/* Error and Success Message Styles */
+.error-message, .success-message {
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 10px;
+    margin: 20px auto 10px;
+    align-self: center;
+    max-width: 30%;
+    display: none;
+    border-radius: 5px;
+    animation-duration: 4s;
+}
+
+.error-message {
+    background-color: #FF5733; /* Red background for error messages */
+    color: white;
+}
+
+.success-message {
+    background-color: #4CAF50; /* Green background for success messages */
+    color: white;
+}
+
+/* Animation for Messages */
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Apply fadeInOut animation to messages */
+.error-message, .success-message {
+    animation: fadeInOut 4s ease-in-out;
+}
 
 
 
